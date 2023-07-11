@@ -9,7 +9,7 @@ public class KafkaConfigTopic {
 
 	public NewTopic topicOne() {
 		
-		return TopicBuilder.name("springTopic")
+		return TopicBuilder.name("springTopic")    // here only we can create partitions by .partitions(value)
 				.build();
 	}
 }
