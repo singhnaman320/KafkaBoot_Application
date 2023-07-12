@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class KafkaConsumerService {
 
-	@KafkaListener
+	@KafkaListener(topics = "stringTopic")
 	public void consume(String message) {
 		
 	}
