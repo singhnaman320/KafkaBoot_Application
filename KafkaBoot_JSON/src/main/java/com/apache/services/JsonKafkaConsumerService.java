@@ -14,5 +14,6 @@ public class JsonKafkaConsumerService {
 	@KafkaListener(topics = "springTopic", groupId = "groupone")
 	public void consume(User user) {
 		
+		LOGGER.info(String.format("Json message received: %S", user.toString()));
 	}
 }
