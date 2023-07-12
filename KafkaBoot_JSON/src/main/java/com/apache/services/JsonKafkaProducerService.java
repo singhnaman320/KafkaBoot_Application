@@ -24,6 +24,8 @@ public class JsonKafkaProducerService {
 	
 	public void sendMessage(User user) {
 		
+		LOGGER.info(String.format("Message sent : %s", user.toString())); // shown in console
+		
 		Message<User> message = MessageBuilder
 								.withPayload(user)
 								.setHeader(KafkaHeaders.TOPIC, "springTopic")
