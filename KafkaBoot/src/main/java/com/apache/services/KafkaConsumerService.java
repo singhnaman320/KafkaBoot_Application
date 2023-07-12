@@ -13,5 +13,6 @@ public class KafkaConsumerService {
 	@KafkaListener(topics = "springTopic", groupId = "groupone")
 	public void consume(String message) { // consume method will listen to springTopic
 		
+		LOGGER.info(String.format("Message suscribed %s", message));
 	}
 }
